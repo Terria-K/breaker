@@ -11,19 +11,6 @@ use crate::game::WIDTH;
 
 use super::{BallBundle, GameOverTag, Lives, Position, Tags, TextBundle};
 
-pub trait Trigger {
-    fn name(&self) -> String;
-}
-
-#[derive(Clone)]
-pub struct KillTrigger;
-
-impl Trigger for KillTrigger {
-    fn name(&self) -> String {
-        "KillTrigger".into()
-    }
-}
-
 pub struct AddPlayer;
 pub struct AddBall(pub BallBundle);
 pub struct AddGameOverText(pub Font);
